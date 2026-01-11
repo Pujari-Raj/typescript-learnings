@@ -33,3 +33,30 @@ for (const jersey of jerseyNumbers) {
 }
 
 console.log('kingJerseyNumber',kingJerseyNumber);
+
+// any type in ts - any is a special TypeScript type that turns OFF type checking for a variable
+
+let value : any;
+
+// value.toUpperCase();
+
+value = 10
+value = "ten"
+value = true
+value = { name: 'string' }
+
+
+let data: unknown;
+
+data = 'hello'
+
+// data?.toUpperCase();/ // error
+
+// type gurading
+if (typeof data === 'string') // type narrowing
+{
+    data.toUpperCase();
+    console.log('data',data);
+}
+
+console.log('data',data);
